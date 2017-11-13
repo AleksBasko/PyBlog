@@ -11,7 +11,7 @@
 
 <p>{{ article.article_text }}</p>
 <p>{{ article.article_datet }}</p>
-<p>{{ article.article_likes }}</p>
+<a href="/article/addlike/{{ article.id }}">Понравилось</a><span>{{ article.article_likes }}</span>
 
 <hr>
 {% for item in comments %}
