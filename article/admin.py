@@ -8,7 +8,7 @@ class ArticleAdd(admin.StackedInline):
 
 
 class ArticleAdmin(admin.ModelAdmin):
-    fields = ['article_title', 'article_text', 'article_date']
+    fields = ['article_title', 'article_text']
     inlines = [ArticleAdd]
     # list_display =
     # list_editable =

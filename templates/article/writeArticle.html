@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form action="/articles/createNewArticle/" method="POST">
+        {% csrf_token %}
+        <input type="text" name="articleTheme">
+        <textarea name="articleContent" id="" cols="30" rows="10"></textarea>
+        <button>Напечатать</button>
+    </form>
+{% endblock %}

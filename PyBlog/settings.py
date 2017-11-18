@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
 # our applications
     'article',
+    'login',
 ]
 
 MIDDLEWARE = [
