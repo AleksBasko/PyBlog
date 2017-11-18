@@ -16,6 +16,13 @@ def articleSingle(request, article_id=1):
     comments = Comments.objects.filter(comments_article_id=article_id)
     return render(request, 'article/article.html', {'article': article, 'comments': comments, 'username': auth.get_user(request).username})
 
+def userPage(request, user_id=1):
+    # args = {}
+    user_articles = Article.objects.filter(article_user=user_id)
+    print(user_articles)
+    # args['articles'] = user_articles
+    return render(request, 'article/articleList.html', {'articleList': user_articles})
+
 def addComment(request):
     if request.method == 'POST':
         # if ("stopAddComment" in request.session):
