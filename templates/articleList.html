@@ -10,7 +10,7 @@
     <h6>{{ item.article_date }}</h6>
     <a href="/articles/get/{{ item.id }}"><h1>{{ item.article_title }}</h1></a>
     {{ item.article_text|truncatewords:2 }}
-    <p><a href="/articles/addlike/{{ item.id }}">Понравилось</a>{{ item.article_likes }}</p>
+    <p>Понравилось: {{ item.article_likes }}</p>
 
 {% endfor %}
 

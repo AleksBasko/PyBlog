@@ -4,8 +4,8 @@ class Article(models.Model):
     class Meta():
         db_table = 'article'
     article_title = models.CharField(max_length=200)
-    article_text = models.TextField()
-    article_date = models.DateTimeField()
+    article_text = models.TextField(null=True)
+    article_date = models.DateTimeField(null=True)
     article_likes = models.IntegerField(default=0)
 
 
