@@ -11,6 +11,11 @@ class Article(models.Model):
     article_likes = models.IntegerField(default=0)
     article_user = models.ForeignKey(User, null=True)
 
+class LikeArticle(models.Model):
+    class Meta():
+        db_table = 'likes'
+    like_article = models.ForeignKey(Article)
+    like_user = models.ForeignKey(User, null=True)
 
 class Comments(models.Model):
     class Meta():

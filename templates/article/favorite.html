@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for arts in articleList %}
+        <h6>{{ arts.like_article.article_date }}</h6>
+        <a href="/articles/get/{{ arts.like_article.id }}"><h1>{{ arts.like_article.article_title }}</h1></a>
+        {{ arts.like_article.article_text|truncatewords:2 }}
+        <p>Понравилось: {{ arts.like_article.article_likes }}</p>
+        <a href="/articles/users/{{ arts.like_article.article_user.id }}">Автор: {{ arts.like_article.article_user.username }}</a>
+        <p>User id: {{ arts.like_article.article_user.id }}</p>
+        <h6>{{ arts.like_user }}</h6>
+    {% endfor %}
+
+{% endblock %}

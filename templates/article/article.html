@@ -5,7 +5,7 @@
 
     <p>{{ article.article_text }}</p>
     <p>{{ article.article_datet }}</p>
-    <a href="/article/addlike/{{ article.id }}">Понравилось</a><span>{{ article.article_likes }}</span>
+    <button id="liker">Понравилось:</button><span id="newslikes">{{ article.article_likes }}</span>
 
     <hr>
     <div class="comment-block" id="comment-block">
@@ -24,6 +24,22 @@
         <button type="submit">Send</button>
     </form>
     <script>
+
+            $('#liker').click( function(){
+
+            $.ajax({
+              type: 'POST',
+              url: '/like/',
+              data: {
+                  id: {{ article.id }},
+                  csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val()
+              },
+              success: function(data) {
+                  var newObj = $.parseJSON(JSON.stringify(data));
+                  $('#newslikes').html(data.variable);
+            }
+            });
+        })
 
         $('#send-commit').on('submit', function (e) {
             e.preventDefault();

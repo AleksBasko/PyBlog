@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Article, Comments
+from .models import Article, Comments, LikeArticle
 from django.http.response import HttpResponse, Http404
 from django.http import JsonResponse
 from django.template.loader import render_to_string
@@ -60,13 +60,23 @@ def createNewArticle(request):
         return redirect('/')
 
 
-# def articleLike(request):
-#     if request.method == 'POST':
-#         article_id = request.POST['id']
-#         article = newsListModal.objects.get(id=article_id)
-#         article.like += 1
-#         article.save()
-#         return JsonResponse({'variable': article.like})
+def articleLike(request):
+    if request.method == 'POST':
+        article_id = request.POST['id']
+        article = Article.objects.get(id=article_id)
+        article.article_likes += 1
+        article.save()
+        ars = LikeArticle(
+            like_article=article_id,
+            like_user=request.user
+        )
+        ars.save()
+        return JsonResponse({'variable': article.article_likes})
+
+def favorite(request):
+    likes = LikeArticle.objects.all()
+    return render(request, 'article/favorite.html', {'articleList': likes})
+
 
 
 # def addLike(request, article_id):
