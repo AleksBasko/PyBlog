@@ -4,6 +4,7 @@ html {
 }
 
 body {
+    min-height: 100vh;
     font-style: normal;
     font-weight: 400;
     background-color: $color-white;
@@ -14,9 +15,10 @@ body {
     font-family: $open;
 }
 
-.main-container {
-    width: 100%;
-    min-height: 100vh;
+.container {
+    width: 75%;
+    max-width: 1170px;
+    margin: 0 auto;
 }
 
 .lr-inner-container {

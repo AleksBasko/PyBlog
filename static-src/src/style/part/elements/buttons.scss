@@ -3,3 +3,15 @@
 button {
     cursor: pointer;
 }
+
+.btn {
+    display: inline-block;
+    text-align: center;
+    line-height: 1.4;
+    color: $color-white;
+    font-size: .95rem;
+    padding: .6rem 1.5rem;
+    letter-spacing: .03rem;
+    cursor: pointer;
+    touch-action: auto;
+}

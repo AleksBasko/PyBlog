@@ -2,26 +2,43 @@
 
 {% block content %}
     <div class="articles-list">
+        <header class="articles-list__header">
+            <div class="login">
+                <div class="login__btn btn">
+                    <span>Log in</span>
+                </div>
+            </div>
+            <div class="container">
+                <h1 class="title">Last news in our team..</h1>
+            </div>
+        </header>
+        <a href="">Войти</a>
+        <a href="">Регистрация</a>
+        <a>Меню</a>
+        <a>Мой профиль</a>
         <a href="/articles/write/">Написать статью</a>
         <a href="/articles/favorite/">Мне понравились</a>
-        {% for item in articleList %}
-    
-            <div class="articles-block">
-                <div class="articles-block__header">
-                    <a href="/articles/users/{{ item.article_user.id }}" class="articles-block__author">
-                        Автор: {{ item.article_user.username }}
-                    </a>
-                    <span class="articles-block__date">{{ item.article_date }}</span>
+        <a>Выйти</a>
+        <div class="container">
+            {% for item in articleList %}
+
+                <div class="articles-block">
+                    <div class="articles-block__header">
+                        <a href="/articles/users/{{ item.article_user.id }}" class="articles-block__author">
+                            Автор: {{ item.article_user.username }}
+                        </a>
+                        <span class="articles-block__date">{{ item.article_date }}</span>
+                    </div>
+
+                    <h2 class="articles-block__title">{{ item.article_title }}</h2>
+                    <p class="articles-block__announce">{{ item.article_text|truncatewords:2 }}</p>
+                    <p>Понравилось: {{ item.article_likes }}</p>
+                    <p>Коментарии: {{ item.article_likes }}</p>
+                    <a href="/articles/get/{{ item.id }}" class="articles-block__read btn">Читать дальше</a>
                 </div>
 
-                <h2 class="articles-block__title">{{ item.article_title }}</h2>
-                <p class="articles-block__announce">{{ item.article_text|truncatewords:2 }}</p>
-                <p>Понравилось: {{ item.article_likes }}</p>
-                <p>Коментарии: {{ item.article_likes }}</p>
-                <a href="/articles/get/{{ item.id }}" class="articles-block__read">Читать дальше</a>
-            </div>
-    
-        {% endfor %}
+            {% endfor %}
+        </div>
     </div>
 
 {% endblock %}

@@ -1,8 +1,21 @@
 
 .articles-list {
-    width: 75%;
-    max-width: 1170px;
-    margin: 0 auto;
+    position: relative;
+}
+
+.articles-list__header {
+    min-height: 350px;
+    padding: {
+        top: 4.5rem;
+        bottom: 4.5rem;
+        left: 0;
+        right: 0;
+    };
+    background: linear-gradient(45deg, #fd81b5 0%, #c961f7 50%, #8089ff 100%);
+
+    .title {
+        width: 400px;
+    }
 }
 
 .articles-block {
@@ -37,14 +50,6 @@
 }
 
 .articles-block__read {
-    display: inline-block;
-    color: $color-white;
-    text-align: center;
-    line-height: 1.4;
-    touch-action: auto;
     background: linear-gradient(45deg, $color-lilac 0%, $color-blue 100%);
-    font-size: .95rem;
-    padding: .6rem 1.5rem;
     box-shadow: 0 7px 15px rgba(0, 9, 128, 0.05), 0 12px 28px rgba(0, 9, 128, 0.075), inset 0 1px 1px rgba(255, 255, 255, 0.1), inset 0 -1px 1px rgba(0, 0, 0, 0.075);
-    cursor: pointer;
 }
