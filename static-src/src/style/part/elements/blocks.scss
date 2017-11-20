@@ -11,14 +11,12 @@ body {
     position: relative;
     min-height: 100%;
     color: $color-grey-darkness;
-    font-family: $Ubuntu;
+    font-family: $open;
 }
 
 .main-container {
     width: 100%;
     min-height: 100vh;
-    display: flex;
-    justify-content: space-between;
 }
 
 .lr-inner-container {
