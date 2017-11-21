@@ -1,2 +1,4 @@
 /.idea
 /our_db.sqlite3
+/static
+/static/js/*

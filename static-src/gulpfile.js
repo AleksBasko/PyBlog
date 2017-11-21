@@ -16,7 +16,7 @@ const path = {
         imageDist: '../static/image/'
     },
     js: {
-        jsSrc: ['src/js/first.js', 'src/js/part/**/*.js'],
+        jsSrc: ['src/js/**/*.js'],
         jsDist: '../static/js/'
     },
     fonts: {
