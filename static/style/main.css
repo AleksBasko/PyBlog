@@ -739,23 +739,51 @@ h4 {
     box-shadow: 0 7px 15px rgba(0, 9, 128, .05), 0 12px 28px rgba(0, 9, 128, .075), inset 0 1px 1px rgba(255, 255, 255, .1), inset 0 -1px 1px rgba(0, 0, 0, .075);
 }
 
-.login__btn {
+.login {
     position: absolute;
     top: 2rem;
     right: 1.5rem;
+}
+
+.menu__btn {
+    display: block;
     -webkit-box-shadow: 0 5px 10px rgba(0, 9, 128, .075), 0 7px 18px rgba(0, 9, 128, .1), inset 0 1px 1px rgba(255, 255, 255, .2), inset 0 -1px 1px rgba(0, 0, 0, .075);
     box-shadow: 0 5px 10px rgba(0, 9, 128, .075), 0 7px 18px rgba(0, 9, 128, .1), inset 0 1px 1px rgba(255, 255, 255, .2), inset 0 -1px 1px rgba(0, 0, 0, .075);
 }
 
-.login__btn span {
+.menu__btn span {
     -webkit-transition: opacity .2s;
     -o-transition: opacity .2s;
     transition: opacity .2s;
     opacity: .6;
 }
 
-.login__btn:hover span {
+.menu__btn:hover span {
     opacity: 1;
+}
+
+.menu {
+    position: absolute;
+    right: 0;
+    width: 240px;
+    background-color: #eee;
+    -webkit-box-shadow: 0 7px 15px rgba(0, 9, 128, .05), 0 12px 28px rgba(0, 9, 128, .075);
+    box-shadow: 0 7px 15px rgba(0, 9, 128, .05), 0 12px 28px rgba(0, 9, 128, .075);
+}
+
+.menu__item {
+    font-family: 'Source Sans Pro', arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1px;
+    padding-top: 1rem;
+    padding-right: 3rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    text-decoration: none;
+    color: #414c5a;
+    border-bottom: 1px solid #444;
 }
 
 /* ------ */
