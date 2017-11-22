@@ -1,4 +1,51 @@
 
 .article__header {
     position: relative;
+    min-height: 350px;
+    padding: {
+        top: 4.5rem;
+        bottom: 4.5rem;
+        left: 0;
+        right: 0;
+    };
+    //background: linear-gradient(45deg, #54ceff 0%, #ff8765 100%);
+    //background: linear-gradient(45deg, #fd81b5 0%, #c961f7 50%, #8089ff 100%);
+    //background: linear-gradient(45deg, #8089ff 0%, #54ceff 100%);
+    //background: linear-gradient(45deg, #19d9b4 0%, #92d275 100%);
+    background: linear-gradient(45deg, #fe60a1 0%, #ff8765 100%);
+    background: linear-gradient(45deg, #c63369 0%, #1ebcf9 100%);
+    background: linear-gradient(135deg, #f25e76 0%,#ff8777 50%,#edb46f 100%);
+    background: linear-gradient(135deg, #01f0db 0%,#01cbd7 50%,#00a7d4 100%);
+    background: linear-gradient(120deg, #92fe9d 0%, #00c9ff 100%);
+    background: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
+    background: linear-gradient(to right,#f97352 0%, #3a98fe 100%);
+    background: linear-gradient(to right,#3edbd9 0%, #5841b8 100%);
+
+
+    background: linear-gradient(to right,#2fbbec 0%, #b92691 100%);
+    background: linear-gradient(to right,#03cf9e 0%, #2623fa 100%);
+    background: linear-gradient(to right,#f35669 0%, #ff8ea1 100%);
+    background: linear-gradient(to right,#59456e 0%, #efb2f2 100%);
+
+
+    background: linear-gradient(45deg,#4db2ec 0%,#4a8f5e 100%);
+    background: linear-gradient(45deg,#4db2ec 0%,#4a8f5e 100%);
+    background: linear-gradient(135deg,#d760b7 0%,#3b78b4 100%);
+    background: linear-gradient(20deg,#00ac81 0%,#ff778e 100%);
+    background: linear-gradient(20deg,#0016be 0%,#2aec74 100%);
+    background: linear-gradient(20deg,#007808 0%,#fff940 100%);
+    background: linear-gradient(135deg,rgba(244,208,63,.97) 0%,#f27a35 100%);
+    background: linear-gradient(135deg,rgba(244,208,63,.97) 0%,#f27a35 100%);
+
+    .title {
+        width: 400px;
+    }
 }
+
+// тень для меню 0 0px 15px rgba(0,0,0,0.06)
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+//#7ac673
+// для web #c4cacc

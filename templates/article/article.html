@@ -1,54 +1,57 @@
 {% extends 'base.html' %}
 
 {% block content %}
+    <div class="article">
+        <header class="article__header">
+            <div class="login">
+                <div class="menu__btn btn login__btn" id="menu-btn">
+                    <span>Log in</span>
+                </div>
 
-    <header class="article__header">
-        <div class="login">
-            <div class="menu__btn btn login__btn">
-                <span>Log in</span>
+                {#            <div class="menu__btn btn">#}
+                {#                <span>Menu</span>#}
+                {#            </div>#}
             </div>
-
-            <div class="menu__btn btn">
-                <span>Menu</span>
+            {#        <div class="menu">#}
+            {#            <a href="" class="menu__item">Войти</a>#}
+            {#            <a href="" class="menu__item">Регистрация</a>#}
+            {#        </div>#}
+            <div class="menu" id="menu-block">
+                <a href="" class="menu__item">Мой профиль</a>
+                <a href="" class="menu__item">Написать статью</a>
+                <a href="" class="menu__item">Мне понравились</a>
+                <a href="" class="menu__item">Выйти</a>
             </div>
-        </div>
-        <div class="menu">
-            <a href="" class="menu__item">Войти</a>
-            <a href="" class="menu__item">Регистрация</a>
-        </div>
-        <div class="menu">
-            <a href="" class="menu__item">Мой профиль</a>
-            <a href="" class="menu__item">Написать статью</a>
-            <a href="" class="menu__item">Мне понравились</a>
-            <a href="" class="menu__item">Выйти</a>
-        </div>
-        <div class="container">
-            <h1 class="title">Name article</h1>
-        </div>
-    </header>
-
-    <h1>{{ article.article_title }}</h1>
-
-    <p>{{ article.article_text }}</p>
-    <p>{{ article.article_datet }}</p>
-    <button id="liker">Понравилось:</button><span id="newslikes">{{ article.article_likes }}</span>
-
-    <hr>
-    <div class="comment-block" id="comment-block">
-        {% for item in comments %}
-            <div class="comment">
-                <p>{{ item.comments_text }}</p>
-                <span>end</span>
+            <div class="container">
+                <h1 class="title">Name article</h1>
             </div>
-        {% endfor %}
+        </header>
+
+        <h1>{{ article.article_title }}</h1>
+
+        <p>{{ article.article_text }}</p>
+        <p>{{ article.article_datet }}</p>
+        <button id="liker">Понравилось:</button>
+        <span id="newslikes">{{ article.article_likes }}</span>
+
+        <hr>
+        <div class="comment-block" id="comment-block">
+            {% for item in comments %}
+                <div class="comment">
+                    <p>{{ item.comments_text }}</p>
+                    <span>end</span>
+                </div>
+            {% endfor %}
+        </div>
+
+        <form id="send-commit">
+            {% csrf_token %}
+            <label for="comment-text">sdvsdv</label>
+            <textarea name="content" id="comment-text" cols="30" rows="10"></textarea>
+            <button type="submit">Send</button>
+        </form>
     </div>
-
-    <form id="send-commit">
-        {% csrf_token %}
-        <label for="comment-text">sdvsdv</label>
-        <textarea name="content" id="comment-text" cols="30" rows="10"></textarea>
-        <button type="submit">Send</button>
-    </form>
+    <div class="btn-to-main">Dthy</div>
     <script>
 
         $('#liker').click(function () {
