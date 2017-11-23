@@ -544,6 +544,7 @@ button {
     text-align: center;
     letter-spacing: .03rem;
     color: #fff;
+    border: none;
     -ms-touch-action: auto;
     touch-action: auto;
 }
@@ -857,8 +858,8 @@ h4 {
 }
 
 .article {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-top: 4.5rem;
+    padding-bottom: 3.5rem;
 }
 
 .article__author {
@@ -887,8 +888,43 @@ h4 {
     color: #414c5a;
 }
 
+.comments {
+    width: 75%;
+}
+
+.comment__avatar {
+    display: inline-block;
+    overflow: hidden;
+    width: 35px;
+    min-width: 35px;
+    height: 35px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #acb6c3;
+    border-radius: 50%;
+    background-color: #dcdfe5;
+}
+
+.comment__block {
+    width: calc(100% - 55px);
+}
+
+.comment__text {
+    font-size: .9rem;
+    color: #59687c;
+}
+
 .comments__title {
     font-size: 1.4rem;
+}
+
+.add-comment__btn {
+    border-radius: 3px;
+    background: -webkit-linear-gradient(70deg, #59456e 0%, #b67ad3 100%);
+    background: -o-linear-gradient(70deg, #59456e 0%, #b67ad3 100%);
+    background: linear-gradient(20deg, #59456e 0%, #b67ad3 100%);
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, .26);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .26);
 }
 
 .login {

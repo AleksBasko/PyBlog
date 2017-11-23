@@ -45,8 +45,8 @@
 
 .article {
     padding: {
-        top: 4rem;
-        bottom: 4rem;
+        top: 4.5rem;
+        bottom: 3.5rem;
     };
 }
 .article__author {
@@ -78,11 +78,40 @@
 }
 
 .comments {
-
+    width: 75%;
 }
 
+.comment__avatar {
+    width: 35px;
+    min-width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+    text-align: center;
+    background-color: #dcdfe5;
+    border: 1px solid #acb6c3;
+}
+
+.comment__block {
+    width: calc(100% - 55px);
+}
+
+.comment__text {
+    color: $color-grey;
+    font-size: .9rem;
+}
 .comments__title {
     font-size: 1.4rem;
+}
+
+.add-comment__btn {
+    //background: #b67ad3;
+    background: linear-gradient(20deg,#59456e 0%,#b67ad3 100%);
+    box-shadow: 0 2px 5px rgba(0,0,0,.26);
+    border-radius: 3px;
+    //box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
 // тень для меню 0 0px 15px rgba(0,0,0,0.06)

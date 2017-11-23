@@ -75,17 +75,37 @@
 
                     {% for item in comments %}
                         <div class="comment">
-                            <p>{{ item.comments_text }}</p>
+                            {#                            <p>{{ item.comments_text }}</p>#}
+                            <div class="comment__row row-flex">
+                                <div class="comment__avatar"></div>
+                                <div class="comment__block">
+                                    <div class="comment__header row-flex">
+                                        <div class="comment__author">
+                                            Author Post
+                                        </div>
+                                        <div class="comment__date">
+                                            12.12.12
+                                        </div>
+                                    </div>
+                                    <div class="comment__text">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda commodi consectetur culpa
+                                        dignissimos dolorem inventore ipsa labore libero modi natus odit porro praesentium quae sunt,
+                                        voluptatum? Accusamus assumenda
+                                    </div>
+                                </div>
+
+                            </div>
+
                             <span>end</span>
                         </div>
                     {% endfor %}
                 </div>
                 <div class="add-comment">
+                    <h5 class="add-comment__title">Write your comment</h5>
                     <form id="send-commit">
                         {% csrf_token %}
-                        <label for="comment-text">sdvsdv</label>
                         <textarea name="content" id="comment-text" cols="30" rows="10"></textarea>
-                        <button type="submit">Send</button>
+                        <button class="add-comment__btn btn" type="submit">Send</button>
                     </form>
                 </div>
 
