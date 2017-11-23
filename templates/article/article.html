@@ -24,34 +24,78 @@
             </div>
             <div class="container">
                 <h1 class="title">Name article</h1>
+                <h1>{{ article.article_title }}</h1>
+                <div class="article__author">Автор</div>
+                <div>{{ article.article_datet }}</div>
             </div>
         </header>
 
-        <h1>{{ article.article_title }}</h1>
+        <section>
+            <div class="container">
+                <div class="article">
+                    <h3 class="article__subtitle">Lorem ipsum dolor sit amet, consectetur</h3>
+                    <div class="article__text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda commodi consectetur culpa
+                        dignissimos dolorem inventore ipsa labore libero modi natus odit porro praesentium quae sunt,
+                        voluptatum? Accusamus assumenda, at doloremque ducimus ex expedita fugit id, ipsam laboriosam
+                        neque nostrum porro sapiente temporibus, ullam veritatis voluptas voluptate. Consequuntur
+                        deserunt minus nesciunt vel. Ad, autem dicta doloribus est eveniet explicabo fugit maxime optio
+                        perspiciatis quaerat quia sapiente? Accusamus aliquam amet dolor eos impedit neque sequi,
+                        suscipit tenetur. Beatae cum cumque illo iste nobis, perspiciatis sapiente vel vitae voluptates!
+                        Autem, dolorem doloremque eaque eveniet explicabo facere id illo laudantium optio perferendis,
+                        quasi quidem sequi tempora veritatis voluptatibus. Accusantium ad, aliquam error eveniet fugiat
+                        illum ipsa itaque officiis quas soluta totam veritatis vero, voluptatem. A assumenda autem
+                        delectus, dolorem dolorum earum eligendi eos fugit impedit inventore iste itaque laboriosam
+                        magni nam nisi non, officiis quidem quos reprehenderit tempore ullam unde vero voluptas. Beatae
+                        commodi impedit ipsam iste itaque labore odio, optio quae quasi soluta? Ad atque consequuntur
+                        deserunt dicta, dolorem eius illo laboriosam natus obcaecati odio perspiciatis quas repellendus
+                        sequi similique ut voluptas voluptatem. Ab alias autem cupiditate deleniti dolorem dolores
+                        dolorum eligendi et eveniet fugit, id iste iure labore laboriosam laudantium libero magnam
+                        maiores molestiae non odit officiis reiciendis repellat reprehenderit tenetur totam ullam velit
+                        veniam? Assumenda blanditiis laudantium maiores? A at debitis, delectus distinctio ducimus
+                        exercitationem fuga in, ipsum magni minima numquam quia quisquam ratione saepe sapiente soluta
+                        suscipit velit. Accusamus adipisci amet atque dolorum, harum id iusto laborum maiores molestiae
+                        mollitia natus nemo nulla quam qui recusandae, sequi sit tenetur velit veritatis voluptate?
+                        Alias, aperiam aspernatur debitis dolore enim error fuga fugiat fugit, illo nam obcaecati
+                        officiis rem suscipit! Eos est mollitia natus neque sed. Ad debitis dolores impedit minus nam
+                        quo ratione soluta voluptates? Beatae ducimus illo molestias quaerat sit.
+                    </div>
 
-        <p>{{ article.article_text }}</p>
-        <p>{{ article.article_datet }}</p>
-        <button id="liker">Понравилось:</button>
-        <span id="newslikes">{{ article.article_likes }}</span>
 
-        <hr>
-        <div class="comment-block" id="comment-block">
-            {% for item in comments %}
-                <div class="comment">
-                    <p>{{ item.comments_text }}</p>
-                    <span>end</span>
+                    <div class="article__likes">
+                        <button id="liker">Понравилось:</button>
+                        <span id="newslikes">{{ article.article_likes }}</span>
+                    </div>
+
+
+                    <div class="article__hr"></div>
                 </div>
-            {% endfor %}
-        </div>
+                <div class="comments" id="comment-block">
+                    <h4 class="comments__title">Comments</h4>
 
-        <form id="send-commit">
-            {% csrf_token %}
-            <label for="comment-text">sdvsdv</label>
-            <textarea name="content" id="comment-text" cols="30" rows="10"></textarea>
-            <button type="submit">Send</button>
-        </form>
+                    {% for item in comments %}
+                        <div class="comment">
+                            <p>{{ item.comments_text }}</p>
+                            <span>end</span>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="add-comment">
+                    <form id="send-commit">
+                        {% csrf_token %}
+                        <label for="comment-text">sdvsdv</label>
+                        <textarea name="content" id="comment-text" cols="30" rows="10"></textarea>
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
+
+
+            </div>
+        </section>
+
+        <div class="btn-to-main">Dthy</div>
     </div>
-    <div class="btn-to-main">Dthy</div>
+
     <script>
 
         $('#liker').click(function () {
