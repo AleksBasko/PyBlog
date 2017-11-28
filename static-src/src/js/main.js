@@ -6,13 +6,13 @@ function showMenu() {
     let itemList = menu.querySelectorAll('.menu__item');
 
     btn.addEventListener('click', function() {
-        console.log(itemList);
         for(let i=0; i < itemList.length; i++) {
             setTimeout(function(){
                 itemList[i].classList.add('active');
-            }, i * 1000);
+            }, i * 300);
         }
     })
+
 }
 
 

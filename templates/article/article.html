@@ -3,25 +3,7 @@
 {% block content %}
     <div class="article">
         <header class="article__header">
-            <div class="login">
-                <div class="menu__btn btn login__btn" id="menu-btn">
-                    <span>Log in</span>
-                </div>
-
-                {#            <div class="menu__btn btn">#}
-                {#                <span>Menu</span>#}
-                {#            </div>#}
-            </div>
-            {#        <div class="menu">#}
-            {#            <a href="" class="menu__item">Войти</a>#}
-            {#            <a href="" class="menu__item">Регистрация</a>#}
-            {#        </div>#}
-            <div class="menu" id="menu-block">
-                <a href="" class="menu__item">Мой профиль</a>
-                <a href="" class="menu__item">Написать статью</a>
-                <a href="" class="menu__item">Мне понравились</a>
-                <a href="" class="menu__item">Выйти</a>
-            </div>
+            {% include "components/login.html" %}
             <div class="container">
                 <h1 class="title">Name article</h1>
                 <h1>{{ article.article_title }}</h1>
