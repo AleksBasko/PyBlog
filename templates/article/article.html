@@ -88,8 +88,10 @@
                                         </div>
                                     </div>
                                     <div class="comment__text">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda commodi consectetur culpa
-                                        dignissimos dolorem inventore ipsa labore libero modi natus odit porro praesentium quae sunt,
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda commodi
+                                        consectetur culpa
+                                        dignissimos dolorem inventore ipsa labore libero modi natus odit porro
+                                        praesentium quae sunt,
                                         voluptatum? Accusamus assumenda
                                     </div>
                                 </div>
@@ -109,11 +111,80 @@
                     </form>
                 </div>
 
+                <div>
+
+                    {% include "components/comment-smile.html" %}
+                    <div class="forum">
+                        <div class="chat"></div>
+                        <div class="d-comment">
+                            <div class="comment__textarea" contenteditable="true"></div>
+                            <div class="comment__smile">
+                                <div class="comment__smile-btn"></div>
+                                <div class="smile-block">
+                    <span class="smile-block__item">
+                        <img class="smile-block__img" src="image/emoji/emoji_1.png" alt="#">
+                    </span>
+                                    <span class="smile-block__item">
+                        <img class="smile-block__img" src="image/emoji/emoji_2.png" alt="#">
+                    </span>
+                                    <span class="smile-block__item">
+                        <img class="smile-block__img" src="image/emoji/emoji_3.png" alt="#">
+                    </span>
+                                    <span class="smile-block__item">
+                        <img class="smile-block__img" src="image/emoji/emoji_4.png" alt="#">
+                    </span>
+                                    <span class="smile-block__item">
+                        <img class="smile-block__img" src="image/emoji/emoji_5.png" alt="#">
+                    </span>
+                                    <span class="smile-block__item">
+                        <img class="smile-block__img" src="image/emoji/emoji_6.png" alt="#">
+                    </span>
+                                    <span class="smile-block__item">
+                        <img class="smile-block__img" src="image/emoji/emoji_7.png" alt="#">
+                    </span>
+                                    <span class="smile-block__item">
+                        <img class="smile-block__img" src="image/emoji/emoji_8.png" alt="#">
+                    </span>
+                                    <span class="smile-block__item">
+                        <img class="smile-block__img" src="image/emoji/emoji_9.png" alt="#">
+                    </span>
+                                </div>
+                            </div>
+                            <div class="d-comment__btn">Send</div>
+                        </div>
+                    </div>
+
+                </div>
+
 
             </div>
         </section>
 
-        <div class="btn-to-main">Dthy</div>
+        <a href="" class="btn__bottom btn__to-main">
+            <svg version="1.1" x="0px" y="0px" viewBox="0 0 100 100">
+                <g transform="translate(0,-952.36218)">
+                    <path style="text-indent:0;text-transform:none;direction:ltr;block-progression:tb;baseline-shift:baseline;enable-background:accumulate;"
+                          d="m 39.627685,972.38722 a 3.0003,3.0003 0 0 0 -1.4688,0.625 l -32.0000002,25 a 3.0003,3.0003 0 0 0 0,4.71878 l 32.0000002,25 a 3.0003,3.0003 0 0 0 4.8438,-2.3437 l 0,-9.9688 c 6.7641,0.064 30.0289,1.3513 47.031202,16.2188 a 3.0003,3.0003 0 0 0 4.8126,-3.1875 c -8.4011,-25.8834 -33.651702,-37.34104 -51.843802,-42.31258 l 0,-10.75 a 3.0003,3.0003 0 0 0 -3.375,-3 z m -2.625,9.125 0,6.875 a 3.0003,3.0003 0 0 0 2.25,2.90625 c 14.6997,3.72131 34.6241,12.05293 45.125,29.00003 -20.0913,-11.8041 -42.6252,-10.9959 -44.5312,-10.9063 a 3.0003,3.0003 0 0 0 -2.8438,3 l 0,6.8438 -24.125,-18.8438 24.125,-18.87498 z"
+                          fill-opacity="1" stroke="none" marker="none" visibility="visible" display="inline"
+                          overflow="visible"/>
+                </g>
+            </svg>
+        </a>
+        <a href="" class="btn__bottom btn__to-write">
+
+            <svg version="1.1" x="0px" y="0px" viewBox="0 0 53.4 55.3" style="enable-background:new 0 0 53.4 55.3;" xml:space="preserve">
+            <title>Media 1</title>
+                <rect x="10.4" y="10.3" width="24.3" height="3.2"/>
+                <rect x="10.4" y="18.5" width="24.3" height="3.2"/>
+                <rect x="10.4" y="26.6" width="24.3" height="3.2"/>
+                <rect x="10.4" y="34.7" width="14.6" height="3.2"/>
+                <path d="M51.7,29.1l-2.5-2.2c-1.6-1.4-4-1.2-5.5,0.3L28.2,44.4l-1.9,10.3l10.1-2.9L52,34.5C53.5,32.9,53.3,30.5,51.7,29.1
+                C51.8,29.1,51.8,29.1,51.7,29.1L51.7,29.1z M33.3,50.2l-3.8,1.1l0.7-3.9L33.3,50.2z M46,37.6L35.6,49l-4.6-4.1l10.3-11.4L46,37.6z
+                 M50.6,31.9c0,0.4-0.1,0.7-0.4,1l-2.6,2.9L43,31.7l2.6-2.9c0.5-0.6,1.4-0.6,2-0.1l2.5,2.2C50.4,31.2,50.5,31.5,50.6,31.9z"/>
+                <path d="M22.5,50.9H8.2c-2.4,0-4.4-2-4.4-4.4l0,0V8.2c0-2.4,2-4.4,4.4-4.4l0,0h28.6c2.4,0,4.4,2,4.4,4.4l0,0v15.7h3.2V8.2
+                c0-4.2-3.4-7.6-7.6-7.6H8.2C4,0.6,0.6,4,0.6,8.2v38.3c0,4.2,3.4,7.6,7.6,7.6h14.3V50.9z"/>
+            </svg>
+        </a>
     </div>
 
     <script>

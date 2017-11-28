@@ -21,7 +21,7 @@ def userPage(request, user_id=1):
     user_articles = Article.objects.filter(article_user=user_id)
     print(user_articles)
     # args['articles'] = user_articles
-    return render(request, 'article/articleList.html', {'articleList': user_articles})
+    return render(request, 'personal/personal.html', {'articleList': user_articles})
 
 def addComment(request):
     if request.method == 'POST':

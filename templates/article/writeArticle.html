@@ -1,10 +1,53 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <form action="/articles/createNewArticle/" method="POST">
-        {% csrf_token %}
-        <input type="text" name="articleTheme">
-        <textarea name="articleContent" id="" cols="30" rows="10"></textarea>
-        <button>Напечатать</button>
-    </form>
+    <div class="write">
+        <header class="write__header">
+            <div class="login">
+                <div class="menu__btn btn login__btn" id="menu-btn">
+                    <span>Log in</span>
+                </div>
+
+                {#            <div class="menu__btn btn">#}
+                {#                <span>Menu</span>#}
+                {#            </div>#}
+            </div>
+            {#        <div class="menu">#}
+            {#            <a href="" class="menu__item">Войти</a>#}
+            {#            <a href="" class="menu__item">Регистрация</a>#}
+            {#        </div>#}
+            <div class="menu" id="menu-block">
+                <a href="" class="menu__item">Мой профиль</a>
+                <a href="" class="menu__item">Написать статью</a>
+                <a href="" class="menu__item">Мне понравились</a>
+                <a href="" class="menu__item">Выйти</a>
+            </div>
+            <div class="container">
+                <h1 class="title">Name article</h1>
+                <h1>{{ article.article_title }}</h1>
+                <div class="article__author">Автор</div>
+                <div>{{ article.article_datet }}</div>
+            </div>
+        </header>
+
+        <section>
+            <div class="container"></div>
+        </section>
+    </div>
+
+    <div class="container">
+        <form action="/articles/createNewArticle/" method="POST">
+            {% csrf_token %}
+            <label for="articleTitle">Напишите главный заголовок</label>
+            <input type="text" name="articleTitle">
+            <label for="articleSubTitle">Напишите под заголовок</label>
+            <input type="text" name="articleSubTitle">
+            <textarea name="articleContent" id="" cols="30" rows="10"></textarea>
+            <label for="articlePhoto">Прикрепите картинки</label>
+            <input type="file" name="articlePhoto">
+            <button>Напечатать</button>
+        </form>
+    </div>
+
+
 {% endblock %}

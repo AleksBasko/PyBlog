@@ -23,7 +23,11 @@
 /* --- components style --- */
 @import "part/pages/articlesList.page";
 @import "part/pages/article.page";
+@import "part/pages/write-article.page";
+@import "part/pages/personal.page";
 @import "part/components/menu.component";
+@import "part/components/comment.component";
+
 /* ------ */
 
 @import "part/media";
