@@ -25,6 +25,12 @@ body {
     margin: 0 auto;
 }
 
+.section--inner {
+    padding: {
+        top: 4rem;
+        bottom: 3.5rem;
+    }
+}
 
 // not mine
 .lr-inner-container {
@@ -41,3 +47,4 @@ body {
         right: auto;
     };
 }
+

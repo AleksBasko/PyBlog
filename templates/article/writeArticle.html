@@ -36,17 +36,47 @@
     </div>
 
     <div class="container">
-        <form action="/articles/createNewArticle/" method="POST">
-            {% csrf_token %}
-            <label for="articleTitle">Напишите главный заголовок</label>
-            <input type="text" name="articleTitle">
-            <label for="articleSubTitle">Напишите под заголовок</label>
-            <input type="text" name="articleSubTitle">
-            <textarea name="articleContent" id="" cols="30" rows="10"></textarea>
-            <label for="articlePhoto">Прикрепите картинки</label>
-            <input type="file" name="articlePhoto">
-            <button>Напечатать</button>
-        </form>
+        <section class="section--inner">
+            <form action="/articles/createNewArticle/" method="POST" class="write-form">
+                {% csrf_token %}
+                <div class="write-form__row">
+                    <div class="write-form__col write-form__col--sm">
+                        <label for="articleTitle" class="write-form__label">Напишите главный заголовок</label>
+                    </div>
+
+                    <div class="write-form__col write-form__col--lg">
+                        <input type="text" name="articleTitle" class="write-form__input">
+                    </div>
+                </div>
+
+                <div class="write-form__row">
+                    <div class="write-form__col write-form__col--sm">
+                        <label for="articleSubTitle" class="write-form__label">Напишите под заголовок</label>
+                    </div>
+
+                    <div class="write-form__col write-form__col--lg">
+                        <input type="text" name="articleSubTitle" class="write-form__input">
+                    </div>
+                </div>
+
+                <div class="write-form__wrap-content">
+                    <div>
+                        <label for="articleContent" class="write-form__label">articleContent</label>
+                    </div>
+                    <textarea name="articleContent" id="" class="write-form__content"></textarea>
+                </div>
+
+                <div class="write-form__row">
+                    <label for="articlePhoto" class="write-form__label">Прикрепите картинки</label>
+                    <input type="file" name="articlePhoto">
+                </div>
+
+                <div class="write-form__wrap-btn">
+                    <button class="write-form__btn btn">Напечатать</button>
+                </div>
+            </form>
+        </section>
+
     </div>
 
 
