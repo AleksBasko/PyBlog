@@ -1,14 +1,8 @@
 
-.write-form__row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.write-form__block {
     margin-bottom: 1.5rem;
 
-    .write-form__col--sm {
-        width: 35%;
-    }
-    .write-form__col--lg {
+    &.write-form__block--col-l {
         width: 65%;
     }
 }
@@ -16,36 +10,58 @@
 .write-form__input {
     height: 38px;
     width: 100%;
-    border: 2px solid $color-green-dark;
-    border-radius: 10px;
     padding: {
-        left: .8rem;
         right: .8rem;
     }
-    line-height: 34px;
+    line-height: 37px;
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    outline: none;
+
+    &:focus + .write-form__line {
+        height: 3px;
+    }
+}
+
+.write-form__block-line {
+    position: relative;
+
+        .write-form__line {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: green;
+    }
 }
 
 .write-form__label {
-    font-weight: 700;
+    font-size: .8rem;
+    color: $color-label;
 }
 
 .write-form__content {
-    min-height: 14rem;
+    min-height: 8rem;
     width: 100%;
     min-width: 100%;
     max-width: 100%;
     padding: {
-        top: .8rem;
         bottom: .8rem;
-        left: 2rem;
         right: 2rem;
     }
-    border: 2px solid $color-green-dark;
-    border-radius: 10px;
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    outline: none;
+
+    &:focus + .write-form__line {
+        bottom: 2px;
+        height: 3px;
+    }
 }
 
 .write-form__wrap-content {
     margin-bottom: 1.5rem;
+    padding-top: 1rem;
 
     .write-form__label {
         display: block;
@@ -57,6 +73,11 @@
 }
 
 .write-form__btn {
-    border: none;
-    background: linear-gradient(45deg, #19d9b4 0%, #92d275 100%);
+    //background: linear-gradient(45deg, #19d9b4 0%, #92d275 100%);
+
+    &[disabled] {
+        border: none;
+        background-color: $color-grey-exlight;
+        cursor: no-drop;
+    }
 }
