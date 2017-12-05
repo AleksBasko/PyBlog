@@ -1,0 +1,78 @@
+
+.file {
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.file__save {
+    box-shadow: inset 0 0 15px 3px #23395e;
+    background: linear-gradient(to bottom, #2e466e 5%, #415989 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2e466e', endColorstr='#415989', GradientType=0);
+    background-color: #2e466e;
+    border-radius: 24px;
+    border: 1px solid #1f2f47;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    padding: 14px 24px;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #263666;
+    letter-spacing: .5px;
+    margin-bottom: 18px;
+}
+
+.file__save:hover {
+    background: linear-gradient(to bottom, #415989 5%, #2e466e 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#415989', endColorstr='#2e466e', GradientType=0);
+    background-color: #415989;
+}
+
+.file__save:active {
+    position: relative;
+    top: 1px;
+}
+
+.file__error {
+    color: red;
+    display: none;
+}
+
+.file__error.file__error--active {
+    display: block;
+}
+
+.file__exten {
+    //display: none;
+}
+
+.file__exten.file__exten--active {
+    display: block;
+}
+
+.file__exten-text {
+    color: #263666;
+    font-size: 16px;
+}
+
+.file__exten-icon {
+    width: 64px;
+    height: 64px;
+    display: block;
+    margin: 9px auto 0;
+}
+
+.file__exten-icon.file__exten-icon--html {
+    background: red;
+}
+
+.file__exten-icon.file__exten-icon--txt {
+    background: green;
+}
+
+.file__exten-icon.file__exten-icon--xml {
+    background: blue;
+}

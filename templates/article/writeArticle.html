@@ -71,7 +71,17 @@
 
                 <div class="write-form__block">
                     <label for="articlePhoto" class="write-form__label">Прикрепите картинки</label>
-                    <input type="file" name="articlePhoto">
+                    <div class="file">
+{#                        <input class="file__input" type="file" name="articlePhoto" multiple>#}
+                        <button class="file__save">Save</button>
+                        <div class="file__result">
+{#                            <div class="file__exten">#}
+{#                                <span class="file__exten-text"></span>#}
+{#                                <div class="file__exten-icon"></div>#}
+{#                            </div>#}
+                        </div>
+                        <div class="file__error">Вы можете добавить файлы только .html, .txt или .xml</div>
+                    </div>
                 </div>
 
                 <div class="write-form__wrap-btn">
@@ -82,5 +92,36 @@
 
     </div>
 
+
+    <script>
+        let fileBtn = document.querySelector('.file__save');
+        let fileBlock = document.querySelector('.file__result');
+
+
+        fileBtn.addEventListener('click', function (ev) {
+            ev.preventDefault();
+            let inputFile = document.createElement('input');
+            inputFile.setAttribute("type", "file");
+            inputFile.click();
+
+            inputFile.addEventListener('change', function () {
+                let exten = this.value.split('.').pop();
+
+                if (exten === 'png' || exten === 'gif' || exten === 'jpg' || exten === 'jpeg') {
+                    let fileExten = document.createElement('div');
+                    fileExten.classList.add('file__exten');
+                    let fileName = this.value.replace(/.*[\/\\]/, '');
+                    fileExten.innerText = 'Имя: ' + fileName;
+
+                    fileBlock.appendChild(inputFile);
+                    fileBlock.appendChild(fileExten);
+                }
+
+                else {
+                    alert('error');
+                }
+            });
+        });
+    </script>
 
 {% endblock %}
