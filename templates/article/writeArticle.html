@@ -39,40 +39,43 @@
         <section class="section--inner">
             <form action="/articles/createNewArticle/" method="POST" class="write-form">
                 {% csrf_token %}
-                <div class="write-form__row">
-                    <div class="write-form__col write-form__col--sm">
+                <div class="write-form__block write-form__block--col-l">
+                    <div class="">
                         <label for="articleTitle" class="write-form__label">Напишите главный заголовок</label>
                     </div>
 
-                    <div class="write-form__col write-form__col--lg">
+                    <div class="write-form__block-line">
                         <input type="text" name="articleTitle" class="write-form__input">
+                        <span class="write-form__line"></span>
                     </div>
                 </div>
 
-                <div class="write-form__row">
-                    <div class="write-form__col write-form__col--sm">
+                <div class="write-form__block write-form__block--col-l">
+                    <div class="">
                         <label for="articleSubTitle" class="write-form__label">Напишите под заголовок</label>
                     </div>
 
-                    <div class="write-form__col write-form__col--lg">
+                    <div class="write-form__block-line">
                         <input type="text" name="articleSubTitle" class="write-form__input">
+                        <span class="write-form__line"></span>
                     </div>
                 </div>
 
-                <div class="write-form__wrap-content">
+                <div class="write-form__wrap-content write-form__block-line">
                     <div>
-                        <label for="articleContent" class="write-form__label">articleContent</label>
+                        <label for="articleContent" class="write-form__label">Основной текст статьи</label>
                     </div>
                     <textarea name="articleContent" id="" class="write-form__content"></textarea>
+                    <span class="write-form__line"></span>
                 </div>
 
-                <div class="write-form__row">
+                <div class="write-form__block">
                     <label for="articlePhoto" class="write-form__label">Прикрепите картинки</label>
                     <input type="file" name="articlePhoto">
                 </div>
 
                 <div class="write-form__wrap-btn">
-                    <button class="write-form__btn btn">Напечатать</button>
+                    <button class="write-form__btn btn" disabled="disabled">Напечатать</button>
                 </div>
             </form>
         </section>
