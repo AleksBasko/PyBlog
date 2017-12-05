@@ -1,10 +1,10 @@
-<div class="preloader" id="preloader2">
-    <p id="preloader">
-        <span>P</span><span>r</span><span>e</span><span>l</span><span>o</span><span>a</span><span>d</span><span>e</span><span>r</span>
-    </p>
+<div class="preloader" id="preloader">
+{#    <p id="preloader-text">#}
+{#        <span>P</span><span>r</span><span>e</span><span>l</span><span>o</span><span>a</span><span>d</span><span>e</span><span>r</span>#}
+{#    </p>#}
 </div>
 <script>
-    let name = document.getElementById('preloader');
+    let name = document.getElementById('preloader-text');
     let span = name.getElementsByTagName('span');
     let time = 200;
 
@@ -27,7 +27,7 @@
     }, span.length * time);
 
     window.onload = function() {
-         document.getElementById('preloader2').classList.add('is-hidden');
+         document.getElementById('preloader').classList.add('is-hidden');
     }
 
 
