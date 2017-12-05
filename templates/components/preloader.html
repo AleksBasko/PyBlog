@@ -4,27 +4,27 @@
 {#    </p>#}
 </div>
 <script>
-    let name = document.getElementById('preloader-text');
-    let span = name.getElementsByTagName('span');
-    let time = 200;
-
-    function show() {
-        for(let i=0; i<span.length;i++){
-            setTimeout(function(){
-                span[i].classList.add('active');
-                if(i>0) {
-                    span[i-1].classList.remove('active');
-                }
-                else {
-                    span[span.length-1].classList.remove('active');
-                }
-            }, i * time)
-        }
-    }
-    show();
-    setInterval( function(){
-        show();
-    }, span.length * time);
+{#    let name = document.getElementById('preloader-text');#}
+{#    let span = name.getElementsByTagName('span');#}
+{#    let time = 200;#}
+{##}
+{#    function show() {#}
+{#        for(let i=0; i<span.length;i++){#}
+{#            setTimeout(function(){#}
+{#                span[i].classList.add('active');#}
+{#                if(i>0) {#}
+{#                    span[i-1].classList.remove('active');#}
+{#                }#}
+{#                else {#}
+{#                    span[span.length-1].classList.remove('active');#}
+{#                }#}
+{#            }, i * time)#}
+{#        }#}
+{#    }#}
+{#    show();#}
+{#    setInterval( function(){#}
+{#        show();#}
+{#    }, span.length * time);#}
 
     window.onload = function() {
          document.getElementById('preloader').classList.add('is-hidden');
